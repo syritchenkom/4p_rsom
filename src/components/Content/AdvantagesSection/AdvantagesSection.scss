@@ -1,0 +1,70 @@
+@import '../../../scss/variables';
+
+.advantagesContainer {
+   // max-width: 1280px;
+   margin: 0 80px 100px;
+
+   .advantagesSection {
+      // margin: 0 80px;
+      // background-color: transparent;
+      // border: none;
+      // color: $color-white;
+
+      .advantagesTitle {
+         text-transform: uppercase;
+         color: $color-l-brown;
+         background: none;
+         border-bottom: 1px solid $color-l-brown;
+         // font-family: 'Barlow';
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 24px;
+         letter-spacing: 0.14em;
+         padding-bottom: 30px;
+         margin-bottom: 55px;
+      }
+   }
+   
+   .advantagesText {
+      margin-bottom: 115px;
+      width: 416px;
+      font-family: 'Barlow Condensed';
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      color: $color-l-brown;
+
+
+   }
+
+   .advantages {
+      // margin: 0 80px;
+      .advantagesCol {
+         .advantagesCard {
+            display: flex;
+            align-items: center;
+            background: transparent;
+            border: none;
+            .advantagesCardImg {
+               width: 200px;
+               height: 200px;
+               background-color: $color-ld-brown;
+               border-radius: 50%;
+               margin-bottom: 35px;
+            }
+            .advantagesCardBody{
+               text-align: center;
+               padding: 0;
+               .advantagesCardBodyTitle {
+                  font-family: "Barlow Condensed";
+                  font-size: 30px;
+                  font-weight: 600;
+                  line-height: 36px;
+                  color: $color-l-brown;
+                  margin-bottom: 45px;
+               }
+            }
+         }
+      }
+   }
+}

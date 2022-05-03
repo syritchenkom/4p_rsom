@@ -1,0 +1,101 @@
+@import '../../../scss/variables';
+
+.aboutContainer {
+   // max-width: 1280px;
+   margin-bottom: 220px;
+   .about {
+      margin: 80px;
+      // background-color: transparent;
+      // border: none;
+      // color: $color-white;
+      .aboutTitle {
+         text-transform: uppercase;
+         color: $color-l-brown;
+         // background: none;
+         border-bottom: 1px solid $color-l-brown;
+         // font-family: 'Barlow';
+         font-weight: 700;
+         font-size: 24px;
+         // line-height: 24px;
+         letter-spacing: 0.14em;
+         padding-bottom: 30px;
+         margin-bottom: 32px;
+      }
+      .aboutCard {
+         background-color: transparent;
+         border: none;
+         color: $color-white;
+      }
+      
+         .aboutImgTop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 630px;
+            height: 470px;
+         }
+         .aboutTextTop {
+            width: 524px;
+            padding: 0;
+            font-family: 'Barlow';
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 34px;
+            span {
+               font-weight: bold;
+            }
+            p {
+               margin-top: 30px;
+            }
+            .aboutList {
+               font-family: 'Barlow';
+               font-weight: 400;
+               font-size: 22px;
+               line-height: 34px;
+               margin-bottom: 95px;
+               
+               li {
+                  display: list-item;
+                  color: white;
+                  background-color: transparent;
+                  list-style-type: disc;
+                  border: none;
+                  padding: 0;
+                  margin-left: 32px;
+                  
+               }
+            }
+         }
+         .aboutBottom {
+            display: flex;
+            align-items: flex-end;
+            .aboutImgBottom { 
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 630px;
+               height: 470px;
+            }
+            .aboutTextBottom {
+               width: 526px;
+               // position: absolute;
+               top: 0;
+               right: 0;
+               padding: 0;
+               font-family: 'Barlow';
+               font-weight: 400;
+               font-size: 22px;
+               line-height: 34px;
+               .aboutTextTitle {
+                  font-family: 'Barlow Condensed';
+                  font-weight: 600;
+                  font-size: 30px;
+                  line-height: 36px;
+                  color: $color-l-brown;
+                  margin-bottom: 30px;
+               }
+            }
+         }
+      
+   }
+}

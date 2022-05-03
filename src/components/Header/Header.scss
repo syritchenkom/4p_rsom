@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+
+.header {
+   // padding: 0;
+   margin-bottom: 100px;
+   // max-width: 100%;
+   .headerTop {
+      width: 100%;
+      height: 65px;
+      background-color: $color-ld-brown;
+      opacity: 0.8;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      img {
+         margin-left: 35px;
+      }
+   }
+   .headerBack {
+      border: none;
+      min-height: 800px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   
+      .headerContent {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      
+         .headerBigLogo {
+            // width: 230px;
+            // height: 315px;
+            width: 235px;
+            height: 405px;
+         }
+      
+         .headerText {
+            width: 688px;
+            height: 224px;
+            font-family: 'Barlow Condensed';
+            font-weight: 600;
+            line-height: 56px;
+            font-size: 56px;
+            color: $color-white;
+         }
+      }
+   }
+}

@@ -1,0 +1,51 @@
+@import '../../../scss/variables';
+
+.waterContainer {
+   // display: inline-block;
+   // float: right;
+   margin: 0 80px 90px;
+
+   .waterSection {
+      .waterTitle {
+         text-transform: uppercase;
+         color: $color-l-brown;
+         background: none;
+         border-bottom: 1px solid $color-l-brown;
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 24px;
+         letter-spacing: 0.14em;
+         padding-bottom: 30px;
+         margin-bottom: 30px;
+      }
+   }
+   .waterDropdown {
+      float: right;
+      margin-bottom: 30px;
+      .dropdownToggle {
+         width: 300px;
+         height: 40px;
+         border-radius: 20px;
+         background-color: transparent;
+         border: 1px solid white;
+         border-color: $color-white;
+         box-shadow: none;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 19px 0 25px;
+         .dropdownMenu {
+            width: 300px;
+            border-radius: 20px;
+            border: 1px solid $color-white;
+         }
+      }
+   }
+   .waterImg {
+      width: 100%;
+      background-color: transparent;
+      background-clip: border-box;
+      border: none;
+      border-radius: 0;
+   }  
+}
