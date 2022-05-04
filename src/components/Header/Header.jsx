@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Nav, Navbar } from 'react-bootstrap';
+import { Card, Container, Navbar } from 'react-bootstrap';
 import LogoItem from '../../assets/header/logo.svg';
 import LogoBigItem from '../../assets/header/logo_big.png';
 import HeaderImage from '../../assets/header/header.png';
@@ -8,7 +8,7 @@ import './Header.scss';
 const Header = () => {
 	return (
 		<Container fluid="auto" className="header">
-			<Navbar className="headerTop">
+			<Navbar className="position-fixed headerTop">
 				{/* Take LogoItem.svg */}
 				<Navbar.Brand href="#home">
 					<img

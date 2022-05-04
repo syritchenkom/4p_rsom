@@ -1,22 +1,15 @@
 @import '../../../scss/variables';
 
 .aboutContainer {
-   // max-width: 1280px;
    margin-bottom: 220px;
    .about {
-      margin: 80px;
-      // background-color: transparent;
-      // border: none;
-      // color: $color-white;
+      margin: 0 80px;
       .aboutTitle {
          text-transform: uppercase;
          color: $color-l-brown;
-         // background: none;
          border-bottom: 1px solid $color-l-brown;
-         // font-family: 'Barlow';
          font-weight: 700;
          font-size: 24px;
-         // line-height: 24px;
          letter-spacing: 0.14em;
          padding-bottom: 30px;
          margin-bottom: 32px;
@@ -25,22 +18,29 @@
          background-color: transparent;
          border: none;
          color: $color-white;
-      }
-      
-         .aboutImgTop {
+         .aboutImg {
             position: absolute;
             top: 0;
-            right: 0;
-            width: 630px;
-            height: 470px;
+            width: 632px;
+            height: 472px;
          }
-         .aboutTextTop {
+         .aboutText {
             width: 524px;
             padding: 0;
+            overflow-y: auto;
             font-family: 'Barlow';
             font-weight: 400;
             font-size: 22px;
             line-height: 34px;
+         }
+      }
+      .aboutTop {
+         .aboutImgTop {
+            right: 0;
+         }
+         .aboutTextTop {
+            margin-bottom: 64px;
+            height: 544px;
             span {
                font-weight: bold;
             }
@@ -66,36 +66,119 @@
                }
             }
          }
-         .aboutBottom {
-            display: flex;
-            align-items: flex-end;
-            .aboutImgBottom { 
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 630px;
-               height: 470px;
+      }
+      .aboutBottom {
+         display: flex;
+         align-items: flex-end;
+         .aboutImgBottom {
+            left: 0;
+         }
+         .aboutTextBottom {
+            position: relative;
+            top: 0;
+            left: 0;
+      
+            .aboutTextTitle {
+               font-family: 'Barlow Condensed';
+               font-weight: 600;
+               font-size: 30px;
+               line-height: 36px;
+               color: $color-l-brown;
+               margin-bottom: 30px;
             }
-            .aboutTextBottom {
-               width: 526px;
-               // position: absolute;
-               top: 0;
-               right: 0;
-               padding: 0;
-               font-family: 'Barlow';
-               font-weight: 400;
-               font-size: 22px;
-               line-height: 34px;
-               .aboutTextTitle {
-                  font-family: 'Barlow Condensed';
-                  font-weight: 600;
-                  font-size: 30px;
-                  line-height: 36px;
-                  color: $color-l-brown;
-                  margin-bottom: 30px;
+         }
+      }
+      
+   }
+}
+
+@media (max-width: 768px) { 
+   .aboutContainer {
+      margin-bottom: 80px;
+      .about {
+         margin: 0 44px;
+         .aboutTitle {
+            padding-bottom: 14px;
+            margin-bottom: 24px;
+            font-size: 18px;
+            line-height: 18px;
+         }
+         .aboutCard {
+            .aboutImg {
+               width: 330px;
+               height: 360px;
+            }
+            .aboutText {
+               width: 332px;
+               font-size: 18px;
+               line-height: 24px;
+            }
+         }
+         .aboutTop {
+            .aboutTextTop {
+               margin-bottom: 60px;
+               height: 408px;
+               p:first-child {
+                  margin-top: 0;
+               }
+               p {
+                  margin-top: 30px;
+               }
+               .aboutList {
+                  width: 337px;
+                  font-size: 18px;
+                  line-height: 24px;
+                  margin-bottom: 0;
                }
             }
          }
-      
+         .aboutBottom {
+            height: 360px;
+            .aboutTextBottom {
+               .aboutTextTitle {
+                  line-height: 28px;
+                  font-size: 26px;
+               }
+            }
+         }
+      }
+   }
+ }
+
+@media (max-width: 375px) {
+   .aboutContainer {
+      margin-bottom: 100px;
+      .about {   
+         .aboutCard {
+            .aboutImg {
+               height: 216px;
+               margin-bottom: 32px;
+            }
+            .aboutText {
+               width: 295px;
+               height: 642px;
+            }
+         }
+         .aboutTop {
+            .aboutImgTop {
+               width: 290px;
+            }
+            .aboutTextTop {
+               position: relative;
+               top: 245px;
+            }
+         }
+         .aboutBottom {
+            height: auto;
+            align-items: flex-start;
+            .aboutImgBottom {
+               width: 295px;
+               left: 0;
+            }
+            .aboutText {
+               top: 230px;
+            }
+         }
+      }
    }
 }

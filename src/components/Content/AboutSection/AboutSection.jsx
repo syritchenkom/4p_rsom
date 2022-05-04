@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	Card,
-	CardGroup,
-	Col,
-	Container,
-	ListGroup,
-	Row
-} from 'react-bootstrap';
+import { Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import './AboutSection.scss';
 import SatelliteImage from '../../../assets/contentSection/About/rectangle_1.png';
 import EarthImage from '../../../assets/contentSection/About/rectangle_2.png';
@@ -19,14 +12,14 @@ const AboutSection = () => {
 				<Row xs={1} className="g-1">
 					<Col>
 						{/* About Section Top */}
-						<Card className="aboutCard">
+						<Card className="aboutCard aboutTop">
 							<Card.Img
 								variant="right"
-								className="aboutImgTop"
+								className="aboutImg aboutImgTop"
 								src={SatelliteImage}
 								alt="Satellite Item"
 							/>
-							<Card.Body className="aboutTextTop">
+							<Card.Body className="aboutText aboutTextTop">
 								<Card.Text>
 									<span>Remote sensing for opencast mines (RSOM)</span> app is
 									designed to analyze the productivity of a mine, its impact on
@@ -58,11 +51,11 @@ const AboutSection = () => {
 						<Card className="aboutCard aboutBottom">
 							<Card.Img
 								variant="left"
-								className="aboutImgBottom"
+								className="aboutImg aboutImgBottom"
 								src={EarthImage}
 								alt="Satellite Item"
 							/>
-							<Card.Body className="aboutTextBottom">
+							<Card.Body className="aboutText aboutTextBottom">
 								<Card.Title className="aboutTextTitle">
 									Improving the management of mines and streamlining the process
 									of opencast mining through the use of satellite images.
