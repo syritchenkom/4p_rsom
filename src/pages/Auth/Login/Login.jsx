@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import httpService, {
+	setAuthorizationToken
+} from '../../../services/httpService';
 
-const Login = () => {
-	const [emailAdress, setEmailAdress] = useState('');
-	const [password, setPasword] = useState('');
+const Login = ({ isAuthHandler }) => {
+	const [usernameControl, setUsernameControl] = useState('admin');
+	const [passwordControl, setPasswordControl] = useState('123');
 
-	useEffect(() => {
-		const getData = async () => {};
-		getData();
-	}, []);
-
-	const handleSubmit = async (e) => {
+	const onSubmit = async (e) => {
 		e.preventDefault();
+
+		const data = await httpService.post('/user/login', {
+			username: usernameControl,
+			password: passwordControl
+		});
+
+		localStorage.setItem('authToken', data.data.key);
+		setAuthorizationToken(data.data.key);
+
+		if (data.key) {
+			isAuthHandler(!!data.key);
+		}
 	};
 
 	return (
@@ -21,21 +31,27 @@ const Login = () => {
 			</h1>
 			<Row className="mt-5">
 				<Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-lg">
-					<Form onSubmit={handleSubmit}>
-						<Form.Group className="mb-3" controlId="formBasicEmail">
+					<Form onSubmit={onSubmit}>
+						<Form.Group className="mb-3" controlId="formBasicName">
 							<Form.Label>User Name</Form.Label>
-							<Form.Control type="name" placeholder="Enter name" />
-							<Form.Text className="text-muted">
-								We'll never share your email with anyone else.
-							</Form.Text>
+							<Form.Control
+								type="text"
+								name="username"
+								value={usernameControl}
+								onChange={(e) => setUsernameControl(e.target.value)}
+								placeholder="Enter name"
+							/>
 						</Form.Group>
 
 						<Form.Group className="mb-3" controlId="formBasicPassword">
 							<Form.Label>Password</Form.Label>
-							<Form.Control type="password" placeholder="Password" />
-						</Form.Group>
-						<Form.Group className="mb-3" controlId="formBasicCheckbox">
-							<Form.Check type="checkbox" label="Check me out" />
+							<Form.Control
+								type="password"
+								name="password"
+								value={passwordControl}
+								onChange={(e) => setPasswordControl(e.target.value)}
+								placeholder="Password"
+							/>
 						</Form.Group>
 						<Button variant="primary" type="submit">
 							Submit
