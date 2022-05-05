@@ -80,9 +80,13 @@
       .advantagesText {
          font-size: 26px;
          line-height: 28px;
+         width: 295px;
          
       }
    }
 }
 @media (max-width: 375px) {
+   .advantagesContainer {
+      margin: 0 32px 100px;
+   }
 }
