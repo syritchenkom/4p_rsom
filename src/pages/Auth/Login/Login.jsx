@@ -11,7 +11,7 @@ const Login = ({ isAuthHandler }) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 
-		const data = await httpService.post('/user/login', {
+		const data = await httpService.post('/users/login', {
 			username: usernameControl,
 			password: passwordControl
 		});
