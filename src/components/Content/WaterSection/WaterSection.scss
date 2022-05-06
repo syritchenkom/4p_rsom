@@ -23,20 +23,36 @@
       .dropdownToggle {
          width: 300px;
          height: 40px;
+         position: relative;
          border-radius: 20px;
-         background-color: transparent;
-         border: 1px solid white;
-         border-color: $color-white;
+         background: $color-brown;
+         border: 1px solid $color-white;
+         color: $color-white;
          box-shadow: none;
          display: flex;
          align-items: center;
          justify-content: space-between;
          padding: 0 19px 0 25px;
-         .dropdownMenu {
-            width: 300px;
-            border-radius: 20px;
-            border: 1px solid $color-white;
+         z-index: 1001;
+      }
+      .dropdownMenu {
+         width: 300px;
+         top: -42px !important;
+         border-radius: 20px;
+         border: 1px solid $color-white;
+         background: $color-brown;
+         padding: 0 7px;
+         a {
+            color: $color-white;
+            padding: 10px;
          }
+         a:active {
+            background-color: transparent;
+         }
+         a:hover {
+            background-color: transparent;
+         }
+         
       }
    }
    .waterImg {
@@ -65,14 +81,9 @@
 @media (max-width: 375px) {
    .waterContainer {
       margin: 0 32px 90px;
-
-      // .waterSection {
-      //    .waterTitle {
-      //       padding-bottom: 14px;
-      //       margin-bottom: 38px;
-      //       font-size: 18px;
-      //       line-height: 18px;
-      //    }
-      // }
+      .waterDropdown {
+         width: 100%;
+         display: flex;
+         justify-content: center;}
    }
 }
