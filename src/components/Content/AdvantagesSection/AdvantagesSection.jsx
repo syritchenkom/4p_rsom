@@ -13,10 +13,8 @@ const AdvantagesSection = () => {
 				<h1 className="advantagesTitle">AdvAntages of RSOM</h1>
 			</div>
 			<div className="advantagesText">
-				<p>
-					Our data science platform helps mining companies source, centralize
-					and analyze new and historic datasets
-				</p>
+				Our data science platform helps mining companies source, centralize and
+				analyze new and historic datasets
 			</div>
 			<Row xs={1} md={2} xxl={4} className="g-4 advantages">
 				<Col className="advantagesCol">

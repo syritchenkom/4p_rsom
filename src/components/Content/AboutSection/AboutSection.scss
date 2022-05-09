@@ -41,10 +41,11 @@
          .aboutTextTop {
             margin-bottom: 64px;
             height: 544px;
-            span {
+            p>span:first-child {
                font-weight: bold;
             }
-            p {
+            p>.textAskUl {
+               display: inline-block;
                margin-top: 30px;
             }
             .aboutList {
@@ -118,12 +119,12 @@
             .aboutTextTop {
                margin-bottom: 60px;
                height: 408px;
-               p:first-child {
-                  margin-top: 0;
-               }
-               p {
-                  margin-top: 30px;
-               }
+               // p>span:first-child {
+               //    margin-top: 0;
+               // }
+               // p>span {
+               //    margin-top: 30px;
+               // }
                .aboutList {
                   width: 337px;
                   font-size: 18px;

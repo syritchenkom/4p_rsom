@@ -1,44 +1,80 @@
 import React, { useState } from 'react';
-import { Card, Container, Dropdown } from 'react-bootstrap';
+import {
+	// ButtonGroup,
+	Card,
+	Container,
+	Dropdown,
+	DropdownButton
+} from 'react-bootstrap';
 import './WaterSection.scss';
 import SatelliteViewPng from '../../../assets/contentSection/Water/satelliteView.png';
 import WaterLinePng from '../../../assets/contentSection/Water/waterLine.png';
 
 export const Images = {
 	satellite: {
+		id: 1,
 		img: SatelliteViewPng,
-		alt: 'Satellite View Image'
+		alt: 'Satellite View'
 	},
-	waterLine: {
+	waterline: {
+		id: 2,
 		img: WaterLinePng,
-		alt: 'Water Line Image'
+		alt: 'Waterline'
 	}
 };
 
 const WaterSection = () => {
-	const [selectedImg, setSelectedImg] = useState();
+	const [selectedImg, setSelectedImg] = useState(Images.satellite);
 	return (
 		<Container fluid="auto" className="waterContainer">
 			<div className="waterSection">
 				<h1 className="waterTitle">Water Area Detection</h1>
 			</div>
-			<Dropdown className="waterDropdown">
+
+			{/* <DropdownButton
+				className="waterDropdown"
+				id="dropdown-basic-button"
+				title={
+					<span>
+						{selectedImg.alt}
+						<i class="bi bi-chevron-down"></i>
+					</span>
+				}>
+				<Dropdown.Item
+					selected
+					eventKey="1"
+					onClick={() => setSelectedImg(Images.satellite)}>
+					Satellite view
+				</Dropdown.Item>
+				<Dropdown.Item
+					eventKey="2"
+					onClick={() => setSelectedImg(Images.waterline)}>
+					Waterline
+				</Dropdown.Item>
+			</DropdownButton> */}
+			<i class="bi bi-chevron-down"></i>
+			<Dropdown className="waterDropdown btn-group">
 				<Dropdown.Toggle
 					variant="transparent"
 					id="dropdown-basic"
-					className="dropdownToggle"></Dropdown.Toggle>
+					className="dropdownToggle">
+					{selectedImg.alt}
+				</Dropdown.Toggle>
 				<Dropdown.Menu className="dropdownMenu">
-					<Dropdown.Item
-						eventKey="1"
-						active
-						onClick={() => setSelectedImg(Images.satellite)}>
-						Satellite view
-					</Dropdown.Item>
-					<Dropdown.Item
-						eventKey="2"
-						onClick={() => setSelectedImg(Images.waterLine)}>
-						Waterline
-					</Dropdown.Item>
+					{selectedImg.id === 1 ? (
+						<Dropdown.Item
+							eventKey="2"
+							onClick={() => setSelectedImg(Images.waterline)}>
+							Waterline
+						</Dropdown.Item>
+					) : (
+						<Dropdown.Item
+							selected
+							eventKey="1"
+							onClick={() => setSelectedImg(Images.satellite)}>
+							Satellite view
+						</Dropdown.Item>
+					)}
 				</Dropdown.Menu>
 			</Dropdown>
 			{/* Take HeaderImage.png */}
