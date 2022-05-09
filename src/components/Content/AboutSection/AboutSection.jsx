@@ -27,7 +27,7 @@ const AboutSection = () => {
 									telematics. It is addressed to mine managements, state bodies
 									and consulting companies that deal with the design and
 									rehabilitation of the area.
-									<span className='textAskUl'>
+									<span className="textAskUl">
 										What, among other things, can be tracked in the RSOM app?
 									</span>
 								</Card.Text>

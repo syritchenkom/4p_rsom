@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-	// ButtonGroup,
-	Card,
-	Container,
-	Dropdown,
-	DropdownButton
-} from 'react-bootstrap';
+import { Card, Container, Dropdown } from 'react-bootstrap';
 import './WaterSection.scss';
 import SatelliteViewPng from '../../../assets/contentSection/Water/satelliteView.png';
 import WaterLinePng from '../../../assets/contentSection/Water/waterLine.png';
@@ -30,29 +24,6 @@ const WaterSection = () => {
 			<div className="waterSection">
 				<h1 className="waterTitle">Water Area Detection</h1>
 			</div>
-
-			{/* <DropdownButton
-				className="waterDropdown"
-				id="dropdown-basic-button"
-				title={
-					<span>
-						{selectedImg.alt}
-						<i class="bi bi-chevron-down"></i>
-					</span>
-				}>
-				<Dropdown.Item
-					selected
-					eventKey="1"
-					onClick={() => setSelectedImg(Images.satellite)}>
-					Satellite view
-				</Dropdown.Item>
-				<Dropdown.Item
-					eventKey="2"
-					onClick={() => setSelectedImg(Images.waterline)}>
-					Waterline
-				</Dropdown.Item>
-			</DropdownButton> */}
-			<i class="bi bi-chevron-down"></i>
 			<Dropdown className="waterDropdown btn-group">
 				<Dropdown.Toggle
 					variant="transparent"
@@ -77,8 +48,6 @@ const WaterSection = () => {
 					)}
 				</Dropdown.Menu>
 			</Dropdown>
-			{/* Take HeaderImage.png */}
-
 			<Card className="waterImg">
 				{selectedImg ? (
 					<Card.Img src={selectedImg.img} alt={selectedImg.alt} />

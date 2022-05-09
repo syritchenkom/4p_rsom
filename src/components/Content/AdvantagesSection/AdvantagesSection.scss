@@ -4,11 +4,6 @@
    margin: 0 80px 100px;
 
    .advantagesSection {
-      // margin: 0 80px;
-      // background-color: transparent;
-      // border: none;
-      // color: $color-white;
-
       .advantagesTitle {
          text-transform: uppercase;
          color: $color-l-brown;
@@ -22,7 +17,6 @@
          margin-bottom: 55px;
       }
    }
-   
    .advantagesText {
       margin-bottom: 115px;
       width: 416px;
@@ -31,10 +25,7 @@
       font-size: 30px;
       line-height: 36px;
       color: $color-l-brown;
-
-
    }
-
    .advantages {
       .advantagesCol {
          .advantagesCard {

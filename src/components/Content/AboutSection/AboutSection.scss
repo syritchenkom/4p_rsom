@@ -15,19 +15,17 @@
          margin-bottom: 32px;
       }
       .aboutCard {
+         display: flex;
          background-color: transparent;
          border: none;
          color: $color-white;
          .aboutImg {
-            position: absolute;
-            top: 0;
-            width: 632px;
-            height: 472px;
+            max-width: 632px;
+            max-height: 472px;
          }
          .aboutText {
             width: 524px;
             padding: 0;
-            overflow-y: auto;
             font-family: 'Barlow';
             font-weight: 400;
             font-size: 22px;
@@ -35,12 +33,11 @@
          }
       }
       .aboutTop {
-         .aboutImgTop {
-            right: 0;
-         }
+         flex-direction: row-reverse;
          .aboutTextTop {
-            margin-bottom: 64px;
+            margin:0 120px 64px 0;
             height: 544px;
+            width: 524px;
             p>span:first-child {
                font-weight: bold;
             }
@@ -69,16 +66,9 @@
          }
       }
       .aboutBottom {
-         display: flex;
-         align-items: flex-end;
-         .aboutImgBottom {
-            left: 0;
-         }
+         flex-direction: row;
          .aboutTextBottom {
-            position: relative;
-            top: 0;
-            left: 0;
-      
+            margin-left: 120px;      
             .aboutTextTitle {
                font-family: 'Barlow Condensed';
                font-weight: 600;
@@ -89,7 +79,6 @@
             }
          }
       }
-      
    }
 }
 
@@ -117,14 +106,14 @@
          }
          .aboutTop {
             .aboutTextTop {
-               margin-bottom: 60px;
+               margin: 0 18px 64px 0;
                height: 408px;
-               // p>span:first-child {
-               //    margin-top: 0;
-               // }
-               // p>span {
-               //    margin-top: 30px;
-               // }
+               p > span:first-child {
+                  margin-top: 0;
+               }
+               p > span {
+                  margin-top: 30px;
+               }
                .aboutList {
                   width: 337px;
                   font-size: 18px;
@@ -136,6 +125,7 @@
          .aboutBottom {
             height: 360px;
             .aboutTextBottom {
+               margin-left: 20px;
                .aboutTextTitle {
                   line-height: 28px;
                   font-size: 26px;
@@ -157,27 +147,31 @@
             }
             .aboutText {
                width: 295px;
-               height: 642px;
             }
          }
          .aboutTop {
+            flex-direction: column;
+            margin-bottom: 32px;
             .aboutImgTop {
                width: 290px;
             }
             .aboutTextTop {
-               position: relative;
-               top: 245px;
+               .aboutList {
+                  width: auto;
+               }
             }
          }
          .aboutBottom {
             height: auto;
-            align-items: flex-start;
+            flex-direction: column;
             .aboutImgBottom {
                width: 295px;
                left: 0;
             }
             .aboutText {
                top: 230px;
+               width: 295px;
+               margin-left: 0;
             }
          }
       }

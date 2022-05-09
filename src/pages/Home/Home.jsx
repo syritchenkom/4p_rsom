@@ -22,7 +22,7 @@ function Home() {
 	}, []);
 	return (
 		<Container className="homeContainer">
-			{/* Import Header */}
+			{/* Import Content */}
 			<Header />
 			<AboutSection />
 			<AdvantagesSection />
