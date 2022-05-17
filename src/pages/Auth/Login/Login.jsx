@@ -11,13 +11,13 @@ const Login = ({ isAuthHandler }) => {
 	const onSubmit = async (e) => {
 		e.preventDefault();
 
-		const data = await httpService.post('/users/login', {
+		const { data } = await httpService.post('/users/login/', {
 			username: usernameControl,
 			password: passwordControl
 		});
 
-		localStorage.setItem('authToken', data.data.key);
-		setAuthorizationToken(data.data.key);
+		localStorage.setItem('authToken', data.key);
+		setAuthorizationToken(data.key);
 
 		if (data.key) {
 			isAuthHandler(!!data.key);
